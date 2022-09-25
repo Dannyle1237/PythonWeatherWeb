@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+{%block title %}Home{% endblock %}
+
+{% block content %}
+<h1 align="center">Cities</h1>
+
+<u1 class="list-group list-group-flush" id="cities">
+    {% for city in user.cities %}
+    <li class="list-group-item">{{ city.name }}
+        <button type="button" class="close" onClick="deleteNote({{ city.id }})">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <button type="button" class="btn btn-outline-primary btn-sm float-right" onClick="checkWeather( {{ city.id }} )">
+            <span aria-hidden="true">check</span>
+        </button>
+    </li>
+    {% endfor %}
+</u1>
+
+<form method="POST">
+    <textarea name="city" id="city" class="form-control"></textarea>
+    <br>
+    <div align="center">
+        <button type="submit" class="btn btn-primary">Add City</button>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html"%}
+{%block title %}Home{% endblock %}
+{% block content %}
+
+{% for weather in user.weather %}
+<h1 align="center" id="header">{{weather.name}}</h1>
+<u1 class="list-group list-group-flush" id="weather_stuff">
+    <li class="list-group-item">
+        <p>Temp in Kelvin: {{weather.temp_k}}</p>
+        <p>Temp in Fahrenheiht: {{weather.temp_f}}°F</p>
+        <p>Temp in Celsius: {{weather.temp_c}}°C</p>
+        <p>Min Temp: {{weather.temp_min}}</p>
+        <p>Max Temp: {{weather.temp_max}}</p>
+        <p>Sky: {{weather.description}}</p>
+        <p>Wind speed: {{weather.wind_speed}}</p>
+        <p>Wind Direction: {{weather.wind_dir}}</p>
+    </li>
+    {% endfor %}
+</u1>
+
+
+{% endblock %}
