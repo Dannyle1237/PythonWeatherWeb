@@ -14,5 +14,7 @@ Now I head over to my Junior year, I've gained decent experience in developing a
 
 It felt great getting my own project out on the web. 
 
+I also spent some time learning Python's sqlite3 library and hashing methods to store user data, but I won't bore you with those details. 
+
 ## Website
-https://www.emailtemplatefiller.com/
+http://www.emailtemplatefiller.com/login?next=%2F
